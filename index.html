@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,12 +9,12 @@
     body {
       margin: 0;
       font-family: 'Montserrat', sans-serif;
-      background-color: #f4f4f4;
+      background-color: #ffffff;
       color: #0f1a3a;
     }
     header {
-      background: #0f1a3a;
-      color: white;
+      background: #ffffff;
+      color: #0f1a3a;
       text-align: center;
       padding: 2rem 1rem;
     }
@@ -23,36 +22,82 @@
       max-width: 220px;
       margin-bottom: 1rem;
     }
-    .hero {
-      background: #0072ce;
-      color: white;
-      text-align: center;
+    .hero-image-text {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
       padding: 3rem 1rem;
+      background-color: #ffffff;
+      gap: 2rem;
+      flex-wrap: nowrap;
     }
-    .hero h1 {
-      font-size: 2.5rem;
+    .hero-image-text img {
+      width: 60%;
+      max-width: 600px;
+      height: auto;
+    }
+    .hero-text-block {
+      width: 40%;
+    }
+    .hero-text-block h1 {
+      font-size: 2.25rem;
       margin-bottom: 1rem;
+      color: #0f1a3a;
     }
-    .hero p {
-      font-size: 1.25rem;
-      margin-bottom: 1.5rem;
+    .hero-text-block ul {
+      list-style: none;
+      padding: 0;
+    }
+    .hero-text-block li {
+      margin-bottom: 0.75rem;
+      font-size: 1.1rem;
+    }
+    @media (max-width: 768px) {
+      .hero-image-text {
+        flex-direction: column;
+      }
+      .hero-image-text img, .hero-text-block {
+        width: 100%;
+      }
     }
     .section {
       padding: 2rem 1rem;
       max-width: 900px;
       margin: 0 auto;
     }
-    .section img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin: 1.5rem auto;
-    }
     .highlight {
-      background: #e6f1fb;
+      background: #f2f6fa;
       padding: 1.5rem;
       border-radius: 10px;
       margin-bottom: 2rem;
+    }
+    form {
+      background: #ffffff;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+    form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    form button {
+      background: #0f1a3a;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
     }
     footer {
       text-align: center;
@@ -73,47 +118,40 @@
     <h2>Deploy. Detect. Protect.</h2>
   </header>
 
-  <section class="hero">
-    <h1>Intelligent Mobile Surveillance</h1>
-    <p>Rapid setup. 24/7 protection. No power required.</p>
+  <section class="hero-image-text">
+    <img src="otg-unit-photo.png" alt="OTG Protect Unit">
+    <div class="hero-text-block">
+      <h1>Intelligent Mobile Surveillance</h1>
+      <ul>
+        <li>4K AI-powered camera with full-color night vision</li>
+        <li>Real-time two-way audio and smart detection</li>
+        <li>Solar-powered with plug-in backup</li>
+        <li>Fully mobile, no towing needed</li>
+        <li>Live view from any browser or phone</li>
+      </ul>
+    </div>
   </section>
 
   <section class="section">
-    <div class="highlight">
-      <h3>AI-Powered 4K Surveillance</h3>
-      <ul>
-        <li>Ultra-wide 109.9° view, full-color night vision</li>
-        <li>Real-time two-way audio</li>
-        <li>Smart alerts with AI detection</li>
-      </ul>
-    </div>
+    <h3>Contact Us</h3>
+    <form action="mailto:info@otgprotect.com" method="POST" enctype="text/plain">
+      <label for="first-name">First Name</label>
+      <input type="text" id="first-name" name="first-name" required>
 
-    <div class="highlight">
-      <h3>Solar-Powered with Battery Backup</h3>
-      <ul>
-        <li>High-efficiency panels for full off-grid use</li>
-        <li>Optional electric plug-in capability</li>
-      </ul>
-    </div>
+      <label for="last-name">Last Name</label>
+      <input type="text" id="last-name" name="last-name" required>
 
-    <div class="highlight">
-      <h3>Mobility Without Compromise</h3>
-      <ul>
-        <li>Manual relocation without towing</li>
-        <li>Integrated wheel locks for on-site stability</li>
-      </ul>
-    </div>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
 
-    <div class="highlight">
-      <h3>Remote Access & Playback</h3>
-      <ul>
-        <li>Live stream via browser, smartphone, or tablet</li>
-        <li>30 days local video storage</li>
-        <li>Event detection, bookmarking, and smart review</li>
-      </ul>
-    </div>
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone">
 
-    <img src="otg-unit-photo.png" alt="OTG Protect Unit">
+      <label for="message">Comment</label>
+      <textarea id="message" name="message" rows="5"></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
   </section>
 
   <footer>
