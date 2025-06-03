@@ -12,92 +12,57 @@
       background-color: #ffffff;
       color: #0f1a3a;
     }
-    header {
-      background: #ffffff;
-      color: #0f1a3a;
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-    header img {
-      max-width: 220px;
-      margin-bottom: 1rem;
-    }
-    .hero-image-text {
+    nav {
       display: flex;
-      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: #ffffff;
+      border-bottom: 1px solid #ddd;
+    }
+    nav .nav-links a {
+      margin-right: 1.5rem;
+      text-decoration: none;
+      color: #0f1a3a;
+      font-weight: 600;
+    }
+    nav img {
+      height: 40px;
+    }
+    .hero {
+      display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 3rem 1rem;
-      background-color: #ffffff;
-      gap: 2rem;
-      flex-wrap: nowrap;
+      height: 100vh;
+      padding: 2rem;
+      text-align: center;
     }
-    .hero-image-text img {
-      width: 60%;
-      max-width: 600px;
-      height: auto;
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
     }
-    .hero-text-block {
-      width: 40%;
-    }
-    .hero-text-block h1 {
-      font-size: 2.25rem;
-      margin-bottom: 1rem;
-      color: #0f1a3a;
-    }
-    .hero-text-block ul {
+    .hero ul {
       list-style: none;
       padding: 0;
+      max-width: 600px;
     }
-    .hero-text-block li {
+    .hero ul li {
       margin-bottom: 0.75rem;
       font-size: 1.1rem;
     }
-    @media (max-width: 768px) {
-      .hero-image-text {
-        flex-direction: column;
-      }
-      .hero-image-text img, .hero-text-block {
-        width: 100%;
-      }
-    }
-    .section {
-      padding: 2rem 1rem;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    .highlight {
+    #services {
+      padding: 3rem 2rem;
       background: #f2f6fa;
-      padding: 1.5rem;
-      border-radius: 10px;
+      text-align: center;
+    }
+    #services h2 {
       margin-bottom: 2rem;
     }
-    form {
-      background: #ffffff;
-      padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-    form label {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-    }
-    form input, form textarea {
-      width: 100%;
-      padding: 0.75rem;
-      margin-bottom: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    form button {
-      background: #0f1a3a;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border: none;
-      border-radius: 5px;
-      font-size: 1rem;
-      cursor: pointer;
+    #services img {
+      max-width: 100%;
+      height: auto;
+      margin-top: 2rem;
     }
     footer {
       text-align: center;
@@ -106,56 +71,44 @@
       padding: 1rem;
       font-size: 0.9rem;
     }
-    a {
-      color: #00aaff;
-      text-decoration: none;
-    }
   </style>
 </head>
 <body>
-  <header>
-    <img src="otg-protect-logo.png" alt="OTG Protect Logo">
-    <h2>Deploy. Detect. Protect.</h2>
-  </header>
-
-  <section class="hero-image-text">
-    <img src="otg-unit-photo.png" alt="OTG Protect Unit">
-    <div class="hero-text-block">
-      <h1>Intelligent Mobile Surveillance</h1>
-      <ul>
-        <li>4K AI-powered camera with full-color night vision</li>
-        <li>Real-time two-way audio and smart detection</li>
-        <li>Solar-powered with plug-in backup</li>
-        <li>Fully mobile, no towing needed</li>
-        <li>Live view from any browser or phone</li>
-      </ul>
+  <nav>
+    <div class="nav-links">
+      <a href="index.html">Services</a>
+      <a href="contact.html">Contact</a>
     </div>
+    <img src="otg-protect-logo.png" alt="OTG Protect Logo">
+  </nav>
+
+  <section class="hero">
+    <h1>Deploy. Detect. Protect.</h1>
+    <ul>
+      <li>AI-powered 4K camera</li>
+      <li>Ultra-wide view and color night vision</li>
+      <li>Solar-powered with electric backup</li>
+      <li>Live remote viewing and playback</li>
+      <li>Manually movable, no towing needed</li>
+      <li>12-ft high-visibility telescoping mast</li>
+    </ul>
   </section>
 
-  <section class="section">
-    <h3>Contact Us</h3>
-    <form action="mailto:info@otgprotect.com" method="POST" enctype="text/plain">
-      <label for="first-name">First Name</label>
-      <input type="text" id="first-name" name="first-name" required>
-
-      <label for="last-name">Last Name</label>
-      <input type="text" id="last-name" name="last-name" required>
-
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="phone">Phone</label>
-      <input type="tel" id="phone" name="phone">
-
-      <label for="message">Comment</label>
-      <textarea id="message" name="message" rows="5"></textarea>
-
-      <button type="submit">Submit</button>
-    </form>
+  <section id="services">
+    <h2>Our Services</h2>
+    <ul style="list-style:none; padding:0;">
+      <li>Real-time smart detection</li>
+      <li>Live browser/mobile viewing</li>
+      <li>Temporary event security</li>
+      <li>Construction jobsite protection</li>
+      <li>Mobile deployment in 2–3 hours</li>
+      <li>Vandalism deterrence and time-lapse recording</li>
+    </ul>
+    <img src="otg-protect-blue.png" alt="OTG Visual">
   </section>
 
   <footer>
-    <p>Contact: <a href="mailto:info@otgprotect.com">info@otgprotect.com</a> | 513-300-1420 | <a href="http://www.otgprotect.com">www.otgprotect.com</a></p>
+    <p>&copy; 2025 OTG Protect | All rights reserved</p>
   </footer>
 </body>
 </html>
