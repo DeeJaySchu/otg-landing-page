@@ -1,16 +1,15 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact - OTG Protect</title>
+  <title>Contact – OTG Protect</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
   <style>
     body {
-      font-family: 'Montserrat', sans-serif;
       margin: 0;
-      background: #ffffff;
+      font-family: 'Montserrat', sans-serif;
+      background-color: #ffffff;
       color: #0f1a3a;
     }
     header {
@@ -32,9 +31,9 @@
       height: 40px;
     }
     .section {
-      padding: 2rem 1rem;
+      padding: 2rem;
       max-width: 800px;
-      margin: auto;
+      margin: 0 auto;
     }
     form {
       background: #ffffff;
@@ -43,9 +42,9 @@
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
     form label {
-      font-weight: 600;
       display: block;
       margin-bottom: 0.5rem;
+      font-weight: 600;
     }
     form input, form textarea {
       width: 100%;
@@ -70,10 +69,6 @@
       padding: 1rem;
       font-size: 0.9rem;
     }
-    a {
-      color: #00aaff;
-      text-decoration: none;
-    }
   </style>
 </head>
 <body>
@@ -82,30 +77,26 @@
       <a href="index.html">Services</a>
       <a href="contact.html">Contact</a>
     </nav>
-    <img src="otg-protect-logo.png" alt="OTG Protect Logo" />
+    <img src="otg-protect-logo.png" alt="OTG Protect Logo">
   </header>
 
   <section class="section">
     <h2>Contact Us</h2>
-    <p><strong>Email:</strong> <a href="mailto:info@otgprotect.com">info@otgprotect.com</a></p>
-    <p><strong>Phone:</strong> 513-300-1420</p>
-
-    <form action="https://formspree.io/f/xeqywzrj" method="POST">
+    <p>Email: <a href="mailto:info@otgprotect.com">info@otgprotect.com</a><br>
+       Phone: 513-300-1420</p>
+    <form action="https://formsubmit.co/info@otgprotect.com" method="POST">
+      <input type="hidden" name="_redirect" value="https://otgprotect.github.io/thank-you.html" />
+      <input type="hidden" name="_captcha" value="false" />
       <label for="first-name">First Name</label>
-      <input type="text" id="first-name" name="first-name" required />
-
+      <input type="text" id="first-name" name="First Name" required />
       <label for="last-name">Last Name</label>
-      <input type="text" id="last-name" name="last-name" required />
-
+      <input type="text" id="last-name" name="Last Name" required />
       <label for="email">Email</label>
-      <input type="email" id="email" name="email" required />
-
+      <input type="email" id="email" name="Email" required />
       <label for="phone">Phone</label>
-      <input type="tel" id="phone" name="phone" />
-
-      <label for="message">Comment</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-
+      <input type="text" id="phone" name="Phone" />
+      <label for="message">Message</label>
+      <textarea id="message" name="Message" rows="4" required></textarea>
       <button type="submit">Submit</button>
     </form>
   </section>
